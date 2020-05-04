@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="Fabonacci" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L2r-8c-MU4">
+                                <rect key="frame" x="137" y="242" width="140" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="yZu-4x-026"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Jvw-tT-TLm">
+                                <rect key="frame" x="137" y="301" width="140" height="304"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TUN-KZ-C8H">
+                                        <rect key="frame" x="0.0" y="0.0" width="140" height="34"/>
+                                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="contentEdgeInsets" minX="16" minY="8" maxX="16" maxY="8"/>
+                                        <state key="normal" title="使用递归"/>
+                                        <connections>
+                                            <action selector="fabonacciUseRecursion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ufw-QM-Dot"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DKA-nD-XUh">
+                                        <rect key="frame" x="0.0" y="54" width="140" height="34"/>
+                                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="contentEdgeInsets" minX="16" minY="8" maxX="16" maxY="8"/>
+                                        <state key="normal" title="使用尾递归"/>
+                                        <connections>
+                                            <action selector="fabonacciUseRecursion2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j11-Pr-Isa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JEI-HU-seq">
+                                        <rect key="frame" x="0.0" y="108" width="140" height="34"/>
+                                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="contentEdgeInsets" minX="16" minY="8" maxX="16" maxY="8"/>
+                                        <state key="normal" title="使用备忘录模式"/>
+                                        <connections>
+                                            <action selector="fabonacciUseMemory:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m3U-dM-hdZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vKe-Uh-FT0">
+                                        <rect key="frame" x="0.0" y="162" width="140" height="34"/>
+                                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="contentEdgeInsets" minX="16" minY="8" maxX="16" maxY="8"/>
+                                        <state key="normal" title="使用动态规划"/>
+                                        <connections>
+                                            <action selector="fabonacciUseDynamicProgramming:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fCH-w0-1d9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4xN-vn-oYB">
+                                        <rect key="frame" x="0.0" y="216" width="140" height="34"/>
+                                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="contentEdgeInsets" minX="16" minY="8" maxX="16" maxY="8"/>
+                                        <state key="normal" title="使用for循环"/>
+                                        <connections>
+                                            <action selector="fabonacciUseForLoop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OdT-ae-8Ny"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oay-8f-de2">
+                                        <rect key="frame" x="0.0" y="270" width="140" height="34"/>
+                                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="contentEdgeInsets" minX="16" minY="8" maxX="16" maxY="8"/>
+                                        <state key="normal" title="使用reduce"/>
+                                        <connections>
+                                            <action selector="fabonacciUseReduce:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1ew-Hw-3r3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="oay-8f-de2" firstAttribute="width" secondItem="TUN-KZ-C8H" secondAttribute="width" id="GAA-QY-Xaj"/>
+                                    <constraint firstItem="vKe-Uh-FT0" firstAttribute="width" secondItem="TUN-KZ-C8H" secondAttribute="width" id="jhF-iT-rA2"/>
+                                    <constraint firstItem="DKA-nD-XUh" firstAttribute="width" secondItem="TUN-KZ-C8H" secondAttribute="width" id="nqF-Cq-jUP"/>
+                                    <constraint firstItem="4xN-vn-oYB" firstAttribute="width" secondItem="TUN-KZ-C8H" secondAttribute="width" id="uXx-0g-0Q1"/>
+                                    <constraint firstItem="JEI-HU-seq" firstAttribute="width" secondItem="TUN-KZ-C8H" secondAttribute="width" id="v67-aq-gRa"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Jvw-tT-TLm" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="NXZ-CA-aVv"/>
+                            <constraint firstItem="Jvw-tT-TLm" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="X7r-vv-OE2"/>
+                            <constraint firstItem="L2r-8c-MU4" firstAttribute="centerX" secondItem="Jvw-tT-TLm" secondAttribute="centerX" id="Y4o-V4-2yq"/>
+                            <constraint firstItem="L2r-8c-MU4" firstAttribute="width" secondItem="Jvw-tT-TLm" secondAttribute="width" id="bqc-Lz-I7d"/>
+                            <constraint firstItem="Jvw-tT-TLm" firstAttribute="top" secondItem="L2r-8c-MU4" secondAttribute="bottom" constant="25" id="dgI-Dt-0O8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="L2r-8c-MU4" id="Scr-hu-6th"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-10.144927536231885" y="40.848214285714285"/>
+        </scene>
+    </scenes>
+</document>
