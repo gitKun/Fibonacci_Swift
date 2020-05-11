@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         print("开始普通递归")
         let start = CFAbsoluteTimeGetCurrent()
         let result =  fibonacciUseRecursion(count)
-        print("Fabir-\(count), result = \(result)")
+        print("Fibonacci-\(count), result = \(result)")
         print("普通递归:          time = \(String(format: "%f", CFAbsoluteTimeGetCurrent() - start))")
     }
     
@@ -34,7 +34,7 @@ class ViewController: UIViewController {
     @IBAction func fibonacciUseTailRecursion(_ sender: UIButton) {
         let start = CFAbsoluteTimeGetCurrent()
         let result =  fibonacciUseTailRecursion(count)
-        print("Fabir-\(count), result = \(result)")
+        print("Fibonacci-\(count), result = \(result)")
         //print("尾递归: time = \(CFAbsoluteTimeGetCurrent() - start)")
         print("尾递归:           time = \(String(format: "%f", CFAbsoluteTimeGetCurrent() - start))")
     }
@@ -43,28 +43,28 @@ class ViewController: UIViewController {
         memoryDict = [:]
         let start = CFAbsoluteTimeGetCurrent()
         let result =  fibonacciUseMemory(count)
-        print("Fabir-\(count), result = \(result)")
+        print("Fibonacci-\(count), result = \(result)")
         print("记事本模式:        time = \(String(format: "%f", CFAbsoluteTimeGetCurrent() - start))")
     }
     
     @IBAction func fibonacciUseDynamicProgramming(_ sender: UIButton) {
         let start = CFAbsoluteTimeGetCurrent()
         let result =  fibonacciUseDynamicProgramming(count)
-        print("Fabir-\(count), result = \(result)")
+        print("Fibonacci-\(count), result = \(result)")
         print("动态规划计算:       time = \(String(format: "%f", CFAbsoluteTimeGetCurrent() - start))")
     }
     
     @IBAction func fibonacciUseForLoop(_ sender: UIButton) {
         let start = CFAbsoluteTimeGetCurrent()
         let result =  fibonacciUseForLoop(count)
-        print("Fabir-\(count), result = \(result)")
+        print("Fibonacci-\(count), result = \(result)")
         print("for循环计算:       time = \(String(format: "%f", CFAbsoluteTimeGetCurrent() - start))")
     }
     
     @IBAction func fibonacciUseReduce(_ sender: UIButton) {
         let start = CFAbsoluteTimeGetCurrent()
         let result =  fibonacciUseReduce(count)
-        print("Fabir-\(count), result = \(result)")
+        print("Fibonacci-\(count), result = \(result)")
         print("reduce计算:       time = \(String(format: "%f", CFAbsoluteTimeGetCurrent() - start))")
     }
 }
