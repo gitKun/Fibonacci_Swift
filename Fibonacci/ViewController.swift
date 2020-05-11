@@ -83,16 +83,16 @@ extension ViewController {
         if count == 1 || count == 2 {
             return 1
         }
-        func fibonacciResult(sum1: Int = 1, sum2: Int = 1, total: Int) -> Int {
+        func fibonacciInternal(sum1: Int = 1, sum2: Int = 1, total: Int) -> Int {
             guard total > 1 else { return sum1 &+ sum2 }
-            return fibonacciResult(sum1: sum2, sum2: sum1 &+ sum2, total: total - 1)
+            return fibonacciInternal(sum1: sum2, sum2: sum1 &+ sum2, total: total - 1)
         }
-        return fibonacciResult(total: count - 2)
+        return fibonacciInternal(total: count - 2)
     }
     
     func fibonacciUseMemory(_ count: Int) -> Int {
-        let memoryReslut = memoryDict[count]
-        if let result = memoryReslut {
+        let memoryResult = memoryDict[count]
+        if let result = memoryResult {
             return result
         }
         if count == 1 || count == 2 {
