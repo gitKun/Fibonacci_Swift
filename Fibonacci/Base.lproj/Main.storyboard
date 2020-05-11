@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="Fabonacci" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="Fibonacci" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -33,7 +33,7 @@
                                         <inset key="contentEdgeInsets" minX="16" minY="8" maxX="16" maxY="8"/>
                                         <state key="normal" title="使用递归"/>
                                         <connections>
-                                            <action selector="fabonacciUseRecursion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ufw-QM-Dot"/>
+                                            <action selector="fibonacciUseRecursion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="85H-eb-cqk"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DKA-nD-XUh">
@@ -42,7 +42,7 @@
                                         <inset key="contentEdgeInsets" minX="16" minY="8" maxX="16" maxY="8"/>
                                         <state key="normal" title="使用尾递归"/>
                                         <connections>
-                                            <action selector="fabonacciUseRecursion2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j11-Pr-Isa"/>
+                                            <action selector="fibonacciUseTailRecursion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qjV-Lf-UuH"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JEI-HU-seq">
@@ -51,7 +51,7 @@
                                         <inset key="contentEdgeInsets" minX="16" minY="8" maxX="16" maxY="8"/>
                                         <state key="normal" title="使用备忘录模式"/>
                                         <connections>
-                                            <action selector="fabonacciUseMemory:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m3U-dM-hdZ"/>
+                                            <action selector="fibonacciUseMemory:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dK9-rG-ApD"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vKe-Uh-FT0">
@@ -60,7 +60,7 @@
                                         <inset key="contentEdgeInsets" minX="16" minY="8" maxX="16" maxY="8"/>
                                         <state key="normal" title="使用动态规划"/>
                                         <connections>
-                                            <action selector="fabonacciUseDynamicProgramming:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fCH-w0-1d9"/>
+                                            <action selector="fibonacciUseDynamicProgramming:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mHt-8f-xtw"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4xN-vn-oYB">
@@ -69,7 +69,7 @@
                                         <inset key="contentEdgeInsets" minX="16" minY="8" maxX="16" maxY="8"/>
                                         <state key="normal" title="使用for循环"/>
                                         <connections>
-                                            <action selector="fabonacciUseForLoop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OdT-ae-8Ny"/>
+                                            <action selector="fibonacciUseForLoop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eVG-00-rvc"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oay-8f-de2">
@@ -78,7 +78,7 @@
                                         <inset key="contentEdgeInsets" minX="16" minY="8" maxX="16" maxY="8"/>
                                         <state key="normal" title="使用reduce"/>
                                         <connections>
-                                            <action selector="fabonacciUseReduce:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1ew-Hw-3r3"/>
+                                            <action selector="fibonacciUseReduce:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Knu-Sn-txK"/>
                                         </connections>
                                     </button>
                                 </subviews>

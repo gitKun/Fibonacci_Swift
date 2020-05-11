@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A1428C26245F89C6009A0342"
-               BuildableName = "Fabonacci.app"
-               BlueprintName = "Fabonacci"
-               ReferencedContainer = "container:Fabonacci.xcodeproj">
+               BuildableName = "Fibonacci.app"
+               BlueprintName = "Fibonacci"
+               ReferencedContainer = "container:Fibonacci.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A1428C26245F89C6009A0342"
-            BuildableName = "Fabonacci.app"
-            BlueprintName = "Fabonacci"
-            ReferencedContainer = "container:Fabonacci.xcodeproj">
+            BuildableName = "Fibonacci.app"
+            BlueprintName = "Fibonacci"
+            ReferencedContainer = "container:Fibonacci.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A1428C26245F89C6009A0342"
-            BuildableName = "Fabonacci.app"
-            BlueprintName = "Fabonacci"
-            ReferencedContainer = "container:Fabonacci.xcodeproj">
+            BuildableName = "Fibonacci.app"
+            BlueprintName = "Fibonacci"
+            ReferencedContainer = "container:Fibonacci.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

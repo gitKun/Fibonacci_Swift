@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  Fabonacci
+//  fibonacci
 //
 //  Created by DR_Kun on 2020/5/4.
 //  Copyright © 2020 kun. All rights reserved.
@@ -22,48 +22,48 @@ class ViewController: UIViewController {
     
     var memoryDict: [Int: Int] = [:]
 
-    @IBAction func fabonacciUseRecursion(_ sender: UIButton) {
+    @IBAction func fibonacciUseRecursion(_ sender: UIButton) {
         print("开始普通递归")
         let start = CFAbsoluteTimeGetCurrent()
-        let result =  fabonacciUseRecursion(count)
+        let result =  fibonacciUseRecursion(count)
         print("Fabir-\(count), result = \(result)")
         print("普通递归:          time = \(String(format: "%f", CFAbsoluteTimeGetCurrent() - start))")
     }
     
     
-    @IBAction func fabonacciUseRecursion2(_ sender: UIButton) {
+    @IBAction func fibonacciUseTailRecursion(_ sender: UIButton) {
         let start = CFAbsoluteTimeGetCurrent()
-        let result =  fabonacciUseRecursion2(count)
+        let result =  fibonacciUseTailRecursion(count)
         print("Fabir-\(count), result = \(result)")
         //print("尾递归: time = \(CFAbsoluteTimeGetCurrent() - start)")
         print("尾递归:           time = \(String(format: "%f", CFAbsoluteTimeGetCurrent() - start))")
     }
     
-    @IBAction func fabonacciUseMemory(_ sender: UIButton) {
+    @IBAction func fibonacciUseMemory(_ sender: UIButton) {
         memoryDict = [:]
         let start = CFAbsoluteTimeGetCurrent()
-        let result =  fabonacciUseMemory(count)
+        let result =  fibonacciUseMemory(count)
         print("Fabir-\(count), result = \(result)")
         print("记事本模式:        time = \(String(format: "%f", CFAbsoluteTimeGetCurrent() - start))")
     }
     
-    @IBAction func fabonacciUseDynamicProgramming(_ sender: UIButton) {
+    @IBAction func fibonacciUseDynamicProgramming(_ sender: UIButton) {
         let start = CFAbsoluteTimeGetCurrent()
-        let result =  fabonacciUseDynamicProgramming(count)
+        let result =  fibonacciUseDynamicProgramming(count)
         print("Fabir-\(count), result = \(result)")
         print("动态规划计算:       time = \(String(format: "%f", CFAbsoluteTimeGetCurrent() - start))")
     }
     
-    @IBAction func fabonacciUseForLoop(_ sender: UIButton) {
+    @IBAction func fibonacciUseForLoop(_ sender: UIButton) {
         let start = CFAbsoluteTimeGetCurrent()
-        let result =  fabonacciUseForLoop(count)
+        let result =  fibonacciUseForLoop(count)
         print("Fabir-\(count), result = \(result)")
         print("for循环计算:       time = \(String(format: "%f", CFAbsoluteTimeGetCurrent() - start))")
     }
     
-    @IBAction func fabonacciUseReduce(_ sender: UIButton) {
+    @IBAction func fibonacciUseReduce(_ sender: UIButton) {
         let start = CFAbsoluteTimeGetCurrent()
-        let result =  fabonacciUseReduce(count)
+        let result =  fibonacciUseReduce(count)
         print("Fabir-\(count), result = \(result)")
         print("reduce计算:       time = \(String(format: "%f", CFAbsoluteTimeGetCurrent() - start))")
     }
@@ -71,26 +71,26 @@ class ViewController: UIViewController {
 
 extension ViewController {
     
-    func fabonacciUseRecursion(_ count: Int) -> Int {
+    func fibonacciUseRecursion(_ count: Int) -> Int {
         if count == 1 || count == 2 {
             return 1
         }
-        return fabonacciUseRecursion(count - 1) &+ fabonacciUseRecursion(count - 2)
+        return fibonacciUseRecursion(count - 1) &+ fibonacciUseRecursion(count - 2)
     }
     
 
-    func fabonacciUseRecursion2(_ count: Int) -> Int {
+    func fibonacciUseTailRecursion(_ count: Int) -> Int {
         if count == 1 || count == 2 {
             return 1
         }
-        func fabonacciResult(sum1: Int = 1, sum2: Int = 1, total: Int) -> Int {
+        func fibonacciResult(sum1: Int = 1, sum2: Int = 1, total: Int) -> Int {
             guard total > 1 else { return sum1 &+ sum2 }
-            return fabonacciResult(sum1: sum2, sum2: sum1 &+ sum2, total: total - 1)
+            return fibonacciResult(sum1: sum2, sum2: sum1 &+ sum2, total: total - 1)
         }
-        return fabonacciResult(total: count - 2)
+        return fibonacciResult(total: count - 2)
     }
     
-    func fabonacciUseMemory(_ count: Int) -> Int {
+    func fibonacciUseMemory(_ count: Int) -> Int {
         let memoryReslut = memoryDict[count]
         if let result = memoryReslut {
             return result
@@ -100,14 +100,14 @@ extension ViewController {
             memoryDict[2] = 1
             return 1
         }
-        let fib1 = fabonacciUseMemory(count - 1)
-        let fib2 = fabonacciUseMemory(count - 2)
+        let fib1 = fibonacciUseMemory(count - 1)
+        let fib2 = fibonacciUseMemory(count - 2)
         memoryDict[count - 1] = fib1
         memoryDict[count - 2] = fib2
         return fib1 &+ fib2
     }
     
-    func fabonacciUseDynamicProgramming(_ count: Int) -> Int {
+    func fibonacciUseDynamicProgramming(_ count: Int) -> Int {
         guard count > 2 else { return 1 }
         var dp: [Int] = Array(repeating: 0, count: count)
         dp[0] = 1
@@ -118,7 +118,7 @@ extension ViewController {
         return dp[count - 1]
     }
     
-    func fabonacciUseForLoop(_ count: Int) -> Int {
+    func fibonacciUseForLoop(_ count: Int) -> Int {
         guard count > 2 else { return 1 }
         var sum1 = 1
         var sum2 = 1
@@ -128,7 +128,7 @@ extension ViewController {
         return sum2
     }
     
-    func fabonacciUseReduce(_ count: Int) -> Int {
+    func fibonacciUseReduce(_ count: Int) -> Int {
         let array = Array(0..<count)
         guard count > 1 else { return 1 }
         let reduceArray = array.reduce([1, 1]) { (reslut, idx) in

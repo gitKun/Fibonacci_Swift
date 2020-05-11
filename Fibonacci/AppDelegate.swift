@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Fabonacci
+//  Fibonacci
 //
 //  Created by DR_Kun on 2020/5/4.
 //  Copyright © 2020 kun. All rights reserved.
