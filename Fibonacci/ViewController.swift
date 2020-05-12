@@ -154,3 +154,64 @@ extension ViewController: UITextFieldDelegate {
         return true
     }
 }
+
+// MARK: 爬楼梯问题
+extension ViewController {
+    /**
+     * 楼梯层数为 s， 每次最多能爬 m
+     */
+    
+    
+    func countFor(totalStep s: Int, maxStep m: Int) -> Int {
+        if m == 0 || s == 0 {
+            return 0
+        }
+        if s == 1 || m == 1 {
+            return 1
+        }
+        var resultArray: [Int] = Array(repeating: 0, count: s + 1)
+        resultArray[1] = 1
+        if s <= m {
+            for idx in 2...s {
+                // f(idx-1) + f(idx-2) + ... + f(1)
+                let pre = (1..<idx).reduce(0, { res, index in
+                    return res &+ resultArray[idx - index]
+                })
+                resultArray[idx] = pre &+ 1
+            }
+        } else {
+            // 计算前 m 项的 结果
+            for idx in 2...m {
+                // f(idx-1) + f(idx-2) + ... + f(1)
+                let suf = (1..<idx).reduce(0, { res, index in
+                    return res &+ resultArray[idx - index]
+                })
+                resultArray[idx] = suf &+ 1
+            }
+            // 计算剩余的结果
+            for idx in m + 1...s {
+                resultArray[idx] = Array(1...m).reduce(0, { res, index in
+                    return res &+ resultArray[idx - index]
+                })
+            }
+        }
+        print("最大步数为 \(m) 时, 走 \(s) 层， 共有 \(resultArray[s]) 种走法")
+        return resultArray[s]
+    }
+
+    // MARK: 按最大 3 步走时的验证函数
+    func countByThree(for s: Int) -> Int {
+        var num1 = 1 // maxStep is one for one step
+        var num2 = num1 + 1 // maxStep is two for two steps
+        var num3 = num2 + num1 + 1 // maxStep is three for three steps
+        // 对于 maxStep 为 m 则有公式 f(m) = f(m-1) + f(m-2) + ... + f(1) + 1
+        for _ in 4...s {
+            (num1, num2, num3) = (num2, num3, num1 + num2 + num3/* 2*num3 - num1 */)
+        }
+        print("最大步数为 3 时, 走 \(s) 层， 共有 \(num3) 种走法")
+        return num3
+    }
+}
+
+
+
