@@ -12,6 +12,7 @@
 		A1428C32245F89C6009A0342 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1428C30245F89C6009A0342 /* Main.storyboard */; };
 		A1428C34245F89C7009A0342 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1428C33245F89C7009A0342 /* Assets.xcassets */; };
 		A1428C37245F89C7009A0342 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1428C35245F89C7009A0342 /* LaunchScreen.storyboard */; };
+		A1C2C22C247268CB00E2A071 /* NQueens.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C2C22B247268CB00E2A071 /* NQueens.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		A1428C33245F89C7009A0342 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1428C36245F89C7009A0342 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1428C38245F89C7009A0342 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1C2C22B247268CB00E2A071 /* NQueens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NQueens.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +58,21 @@
 			children = (
 				A1428C2A245F89C6009A0342 /* AppDelegate.swift */,
 				A1428C2E245F89C6009A0342 /* ViewController.swift */,
+				A1C2C22A247268C000E2A071 /* Leetcode */,
 				A1428C30245F89C6009A0342 /* Main.storyboard */,
 				A1428C33245F89C7009A0342 /* Assets.xcassets */,
 				A1428C35245F89C7009A0342 /* LaunchScreen.storyboard */,
 				A1428C38245F89C7009A0342 /* Info.plist */,
 			);
 			path = Fibonacci;
+			sourceTree = "<group>";
+		};
+		A1C2C22A247268C000E2A071 /* Leetcode */ = {
+			isa = PBXGroup;
+			children = (
+				A1C2C22B247268CB00E2A071 /* NQueens.swift */,
+			);
+			path = Leetcode;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1428C2F245F89C6009A0342 /* ViewController.swift in Sources */,
+				A1C2C22C247268CB00E2A071 /* NQueens.swift in Sources */,
 				A1428C2B245F89C6009A0342 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
